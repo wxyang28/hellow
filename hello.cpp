@@ -6,8 +6,8 @@ int main()
 	for(int i=0;i<10;i++){
 		sum=sum+i;
 	}
-	cout << "Hello " ;
-	cout << "World!!!"
+	cout << "HELLO " ;
+	cout << "World!!!";
 	//cout << "The sum is :"<<sum << endl;
 	return 0;
 }
