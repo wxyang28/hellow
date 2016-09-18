@@ -8,6 +8,6 @@ int main()
 	}
 	cout << "HELLO " ;
 	cout << "World!!!";
-	//cout << "The sum is :"<<sum << endl;
+	cout << "The sum is :"<<sum << endl;
 	return 0;
 }
