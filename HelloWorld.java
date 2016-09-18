@@ -1,5 +1,4 @@
 /*
- * 徐怡琳
  * file->new->JavaProject
  * new->class
  */
