@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="Cal_F4"
+  id="myeclipse.1474787472722"
+  context-root="/Cal_F4"
+  j2ee-spec="6.0"
+  archive="Cal_F4.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
