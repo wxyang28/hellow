@@ -2,7 +2,7 @@ package com.lgs.bean;
 
 public class grade {
      String username;
-     String chengji;
+     String score;
      String time;
 	public String getUsername() {
 		return username;
@@ -10,11 +10,11 @@ public class grade {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	public String getChengji() {
-		return chengji;
+	public String getScore() {
+		return score;
 	}
-	public void setChengji(String chengji) {
-		this.chengji = chengji;
+	public void setScore(String score) {
+		this.score = score;
 	}
 	public String getTime() {
 		return time;

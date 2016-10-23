@@ -1,2 +1,5 @@
 eclipse.preferences.version=1
-encoding//WebRoot/img/example.jsp=UTF-8
+encoding//WebRoot/SSGrade.jsp=UTF-8
+encoding//WebRoot/exercise.jsp=UTF-8
+encoding//src/com/lgs/servlet/Register.java=UTF-8
+encoding//src/com/lgs/servlet/UploadServlet.java=UTF-8

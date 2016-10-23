@@ -14,9 +14,9 @@ import javax.servlet.http.HttpSession;
 import javax.swing.JOptionPane;
 
 import com.lgs.dao.Dao;
+
 public class Register extends HttpServlet {
 
-	
 	public Register() {
 		super();
 	}
@@ -29,55 +29,45 @@ public class Register extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		      doPost(request,response);
+		doPost(request, response);
 	}
+
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		//…Ë÷√Ã·Ωª±Ìµ•µƒ÷–Œƒ±‡¬Î
-        request.setCharacterEncoding("GBK");
-        HttpSession mySession = request.getSession(true);
-        //«Âø’¥ÌŒÛœ˚œ¢
-          mySession.setAttribute("errMsg","");
-        //ªÒ»°dao∂‘œÛ
-          Dao dao=new Dao();
-          String sUsername,sPassword,sRealname,sRank;
-          sUsername=request.getParameter("username");
-          sUsername=sUsername.replaceAll("'","''");
-          sPassword=request.getParameter("password");
-          sPassword=sPassword.replaceAll("'","''");
-          sRealname=request.getParameter("realname");
-          sRealname=sRealname.replaceAll("'","''");
-          sRank="0";
-          String insertQuery="insert into user set username='"+sUsername+"',password='"+sPassword+"'+rank='"+sRank+"',realname='"+sRealname+"'";
-          String selectquery="select * from user where username='"+sUsername+"'";
-          Connection conn=null;
-          Statement stmt=null;
-          ResultSet rs=null;
-          try
-          {
-            //ªÒµ√¡¨Ω” ˝æ›ø‚
-           
-            conn=dao.getDBConnection();
-            //¥¥Ω®statement
-            stmt=conn.createStatement();
-            rs=stmt.executeQuery(selectquery);
-            //≤Èø¥ «∑Ò“—æ≠¥Ê‘⁄”√ªß
-            if(rs.next())
-            {
-              response.sendRedirect("register.html");
-              JOptionPane.showMessageDialog(null, "”√ªß“—æ≠¥Ê‘⁄", "”√ªß“—æ≠¥Ê‘⁄", JOptionPane.CLOSED_OPTION);
-            }
-            else
-            {
-             stmt.executeUpdate(insertQuery);
-             JOptionPane.showMessageDialog(null, "”√ªß◊¢≤·≥…π¶", "”√ªß◊¢≤·≥…π¶£°", JOptionPane.CLOSED_OPTION);
-             response.sendRedirect("login.jsp");
-            }
-          }
-          catch(SQLException e)
-          {
-             e.printStackTrace();
-          }
+		request.setCharacterEncoding("utf-8");
+		HttpSession mySession = request.getSession(true);
+		Dao dao = new Dao();
+		String sUsername, sPassword, sRealname, sRole;
+		sUsername = request.getParameter("username").toString();
+		sPassword = request.getParameter("password").toString();
+		sRealname = request.getParameter("realname").toString();
+		sRole = request.getParameter("listRole").toString();
+		String insertQuery = "insert into user set username='" + sUsername
+				+ "',upassword='" + sPassword + "',rank='" + sRole
+				+ "',realname='" + sRealname + "'";
+		String selectquery = "select * from user where username='" + sUsername
+				+ "'and rank='" + sRole + "'";
+		try {
+		
+			Connection conn = dao.getDBConnection();
+		
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery(selectquery);
+	
+			if (rs.next()) {
+				mySession.setAttribute("RegisterError", "error");
+				response.sendRedirect("Tea_register.jsp");
+
+			} else {
+				mySession.setAttribute("RegisterError", "Ê≥®ÂÜåÊàêÂäüÔºÅ");
+				mySession.setAttribute("loginError","error");
+				stmt.executeUpdate(insertQuery);
+				response.sendRedirect("login.jsp");
+
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void init() throws ServletException {

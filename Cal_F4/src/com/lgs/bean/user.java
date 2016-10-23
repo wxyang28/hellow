@@ -1,6 +1,6 @@
 package com.lgs.bean;
 
-public class user {
+public class User {
       public String username;
       public String upassword;
       public String rank;

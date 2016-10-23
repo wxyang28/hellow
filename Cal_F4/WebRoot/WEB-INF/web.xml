@@ -1,61 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="3.0" 
-	xmlns="http://java.sun.com/xml/ns/javaee" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
-  <display-name></display-name>
+	<display-name></display-name>
+	<servlet>
+		<servlet-name>Register</servlet-name>
+		<servlet-class>com.lgs.servlet.Register</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Register</servlet-name>
+		<url-pattern>/Register</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SelectError</servlet-name>
+		<servlet-class>com.lgs.servlet.SelectError</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SelectError</servlet-name>
+		<url-pattern>/SelectError</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SelectExercise</servlet-name>
+		<servlet-class>com.lgs.servlet.SelectExercise</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SelectExercise</servlet-name>
+		<url-pattern>/SelectExercise</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SelectRole</servlet-name>
+		<servlet-class>com.lgs.servlet.SelectRole</servlet-class>
+	</servlet>
+	<servlet>
+
+		<servlet-name>UploadServlet</servlet-name>
+		<servlet-class>com.lgs.servlet.UploadServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ListFileServlet</servlet-name>
+		<servlet-class>com.lgs.servlet.ListFileServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DownloadServlet</servlet-name>
+		<servlet-class>com.lgs.servlet.DownloadServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>JudgeItem</servlet-name>
+		<servlet-class>com.lgs.servlet.JudgeItem</servlet-class>
+	</servlet>
   <servlet>
     <description>This is the description of my J2EE component</description>
     <display-name>This is the display name of my J2EE component</display-name>
-    <servlet-name>SelectServlet</servlet-name>
-    <servlet-class>com.lgs.servlet.SelectServlet</servlet-class>
-  </servlet>
-  <servlet>
-    <description>This is the description of my J2EE component</description>
-    <display-name>This is the display name of my J2EE component</display-name>
-    <servlet-name>select</servlet-name>
-    <servlet-class>com.lgs.servlet.select</servlet-class>
-  </servlet>
-  <servlet>
-    <description>This is the description of my J2EE component</description>
-    <display-name>This is the display name of my J2EE component</display-name>
-    <servlet-name>Selectct</servlet-name>
-    <servlet-class>com.lgs.servlet.Selectct</servlet-class>
-  </servlet>
-  <servlet>
-    <description>This is the description of my J2EE component</description>
-    <display-name>This is the display name of my J2EE component</display-name>
-    <servlet-name>Register</servlet-name>
-    <servlet-class>com.lgs.servlet.Register</servlet-class>
+    <servlet-name>weqwre</servlet-name>
+    <servlet-class>com.lgs.servlet.weqwre</servlet-class>
   </servlet>
 
-
-
-
+	<servlet-mapping>
+		<servlet-name>SelectRole</servlet-name>
+		<url-pattern>/SelectRole</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UploadServlet</servlet-name>
+		<url-pattern>/UploadServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ListFileServlet</servlet-name>
+		<url-pattern>/ListFileServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DownloadServlet</servlet-name>
+		<url-pattern>/DownloadServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>JudgeItem</servlet-name>
+		<url-pattern>/JudgeItem</url-pattern>
+	</servlet-mapping>
   <servlet-mapping>
-    <servlet-name>SelectServlet</servlet-name>
-    <url-pattern>/servlet/SelectServlet</url-pattern>
+    <servlet-name>weqwre</servlet-name>
+    <url-pattern>/servlet/weqwre</url-pattern>
   </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>select</servlet-name>
-    <url-pattern>/servlet/select</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>Selectct</servlet-name>
-    <url-pattern>/servlet/Selectct</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>Register</servlet-name>
-    <url-pattern>/servlet/Register</url-pattern>
-  </servlet-mapping>	
-  <welcome-file-list>
-    <welcome-file>login.jsp</welcome-file>
-    <welcome-file>login.js</welcome-file>
-    <welcome-file>logout.jsp</welcome-file>
-    <welcome-file>register.jsp</welcome-file>
-    <welcome-file>register.html</welcome-file>
-    <welcome-file>select.jsp</welcome-file>
-    <welcome-file>change.jsp</welcome-file>
-  </welcome-file-list>
+
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>
 </web-app>
