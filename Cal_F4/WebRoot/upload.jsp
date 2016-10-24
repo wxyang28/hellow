@@ -8,7 +8,7 @@
 <meta http-equiv="expires" content="0">
 </head>
 
-<body bgcolor=pink>
+<body background="img/bg_ssg.png" style="background-repeat:no-repeat; background-position:1080px  200px; background-color:#FFFACD;">
 	<p align="right">
 		<a href="teacher.jsp">返回</a>
 	</p>
