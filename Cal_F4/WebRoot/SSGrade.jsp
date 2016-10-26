@@ -7,12 +7,16 @@
 <meta http-equiv="expires" content="0">
 </head>
 
-<body background="img/xiong04.jpg">
+<body bgcolor="#FFF0F5" background="img/bg_ssg.png" style="background-repeat:no-repeat; background-position:1080px  200px;">
 	<div>
 		<p align=right>
-			<a href="student.jsp">返回</a>
+			<a href="student.jsp" style="color:#000000;position:absolute; top: 20px; right:20px;">返回</a>
 		</p>
 	</div>
+	<br>
+	<br>
+	<br>
+	<br>
 	<div align=center>
 		<%
 			String username=session.getAttribute("usernameGrade").toString();
